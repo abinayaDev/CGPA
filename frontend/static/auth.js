@@ -21,10 +21,10 @@ async function initAuth() {
             const isStudent = currentUser.email === "studentit@gmail.com";
 
             if (isLoginPage) {
-                window.location.href = isStudent ? "/predict" : "/upload";
-            } else if (path === "/upload" && isStudent) {
+                window.location.href = isStudent ? "/predict.html" : "/upload.html";
+            } else if (path === "/upload.html" && isStudent) {
                 // Prevent student from accessing upload page
-                window.location.href = "/predict";
+                window.location.href = "/predict.html";
             }
 
             // UI Manipulation for Student
@@ -89,9 +89,9 @@ function setupAuthListeners() {
                 // Check user role for redirect
                 const user = data.user;
                 if (user && user.email === "studentit@gmail.com") {
-                    window.location.href = "/predict";
+                    window.location.href = "/predict.html";
                 } else {
-                    window.location.href = "/upload";
+                    window.location.href = "/upload.html";
                 }
             }
         });
