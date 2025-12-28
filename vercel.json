@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "^/$", "dest": "/frontend/index.html" },
+    { "src": "^/predict$", "dest": "/frontend/predict.html" },
+    { "src": "^/upload$", "dest": "/frontend/upload.html" },
+    { "src": "^/(.*)$", "dest": "/frontend/$1" }
+  ]
+}
