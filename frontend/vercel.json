@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "^/$", "dest": "/index.html" },
+    { "src": "^/predict$", "dest": "/predict.html" },
+    { "src": "^/upload$", "dest": "/upload.html" },
+    { "src": "^/(.*)$", "dest": "/$1" }
+  ]
+}
